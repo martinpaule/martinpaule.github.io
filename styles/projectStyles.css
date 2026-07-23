@@ -235,10 +235,22 @@
 .close-btn:focus { color: var(--accent); text-decoration: none; cursor: pointer; }
 
 
-@media (max-width: 620px) {
+@media (max-width: 600px) {
+  .project { padding: 16px 18px; }
+
+  /* Header reflows: title + button on row 1, tagline full-width below */
+  .project-header { flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .project-title { flex: 1 1 auto; font-size: 1.1rem; }
+  .highlight-description { order: 3; flex-basis: 100%; margin: 2px 0 0; }
+  .collapse-button { order: 2; }
+
   .project-details { flex-direction: column; }
   .project-text { flex: 1 1 auto; }
   .project-media { margin-left: 0; margin-top: 14px; align-items: stretch; }
-  .collapsed .project-media { width: 40%; }
-  .tooltip { right: auto; left: 0; top: calc(100% + 10px); width: min(300px, 80vw); }
+  .collapsed .project-media { width: 60%; margin-top: 12px; }
+
+  .tt-header-container { gap: 12px; }
+  .tooltip { right: auto; left: 0; top: calc(100% + 10px); width: min(300px, 78vw); }
+
+  .show-more-button { width: 100%; }
 }

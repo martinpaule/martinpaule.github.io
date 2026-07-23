@@ -543,33 +543,61 @@ hamButton {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 860px) {
+
+/* Tablet — hero stacks to a single centered column */
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 26px;
+    margin-top: 46px;
   }
   .hero-media { order: -1; }
-  .personal-picture { max-width: 220px; }
+  .personal-picture { max-width: 210px; }
   .cta-row, .hero-links { justify-content: center; }
   .lead { margin-left: auto; margin-right: auto; }
   .featured-grid { grid-template-columns: 1fr; }
-  section { margin: 64px 0; }
+  section { margin: 70px 0; }
 }
 
-@media (max-width: 620px) {
-  .nav-inner { padding: 8px 16px; gap: 10px; }
-  .brand { font-size: 1rem; }
-  nav ul li a { padding: 7px 10px; font-size: 0.9rem; }
-  main { padding: 0 16px; }
-  .entry-top { flex-direction: column; gap: 6px; }
-  .entry-card, .skill-group, .featured-card { padding: 20px; }
+/* Phone — tighten rhythm, reflow nav, full-width tap targets */
+@media (max-width: 600px) {
+  main { padding: 0 18px; }
+  section { margin: 54px 0; scroll-margin-top: 116px; }
+  .section-head { margin-bottom: 22px; }
+  .section-intro { margin-bottom: 20px; }
+
+  /* Nav: egg + brand on the first row, links centered on a second row */
+  .nav-inner { flex-wrap: wrap; row-gap: 4px; column-gap: 8px; padding: 8px 16px; }
+  .brand { font-size: 1.02rem; margin-right: auto; }
+  nav { flex-basis: 100%; margin-left: 0; }
+  nav ul { justify-content: center; gap: 2px 4px; }
+  nav ul li a { padding: 6px 11px; font-size: 0.92rem; }
+
+  /* Hero */
+  .hero { margin-top: 30px; gap: 22px; }
+  .eyebrow { font-size: 0.95rem; }
+  .hero-text h1 { font-size: clamp(2.3rem, 11vw, 3rem); }
+  .roles { font-size: 1.02rem; margin-bottom: 16px; }
+  .roles span { margin: 0 4px; }
+  .lead { font-size: 1.02rem; margin-bottom: 24px; }
+  .cta-row { gap: 10px; width: 100%; }
+  .cta-row .btn { flex: 1 1 auto; text-align: center; }
+  .hero-links { gap: 18px; }
+
+  /* Cards & grids */
+  .timeline { gap: 14px; }
+  .skills-grid, .featured-grid, .contact-grid { gap: 14px; }
+  .entry-top { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .entry-card, .skill-group, .featured-card, .contact-card { padding: 20px 18px; }
+  .entry-points { gap: 9px; }
 }
 
-@media (max-width: 460px) {
-  nav { width: 100%; margin-left: 0; }
-  nav ul { justify-content: center; }
-  .nav-inner { flex-wrap: wrap; justify-content: center; }
-  .brand { margin: 0 auto; }
+/* Small phones */
+@media (max-width: 380px) {
+  .hero-text h1 { font-size: 2.1rem; }
+  .roles { font-size: 0.96rem; }
+  nav ul li a { padding: 6px 9px; font-size: 0.88rem; }
+  .btn { padding: 11px 16px; }
+  .chips li { font-size: 0.82rem; }
 }
